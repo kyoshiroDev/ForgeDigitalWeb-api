@@ -19,8 +19,6 @@ const transporter = nodemailer.createTransport({
 app.post("/send-email", async (req, res) => {
   const formData = req.body;
 
-  console.log(formData)
-
   try {
     // Vérifier que les informations sont présentes
     if (!formData.firstName || !formData.lastName || !formData.email) {
